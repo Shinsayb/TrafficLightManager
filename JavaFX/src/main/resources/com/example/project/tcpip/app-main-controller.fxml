@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.project.tcpip.AppMainController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <VBox>
+            <HBox alignment="CENTER">
+                <padding>
+                    <Insets topRightBottomLeft="10.0"/>
+
+                </padding>
+                <spacing>20.0</spacing>
+                <Label text = "TEMPERTURE" prefWidth="100.0" prefHeight="20.0" />
+                <ProgressBar fx:id="progressbar_temperature" prefWidth="350.0" prefHeight="20.0" />
+                <Label fx:id="label_temperature" prefWidth="50.0" prefHeight="20.0" text ="TEMP" />
+
+            </HBox>
+            <HBox alignment="CENTER">
+                <padding>
+                    <Insets topRightBottomLeft="10.0"/>
+
+                </padding>
+                <spacing>20.0</spacing>
+                <Label text = "HUMIDITY" prefWidth="100.0" prefHeight="20.0" />
+                <ProgressBar fx:id="progressbar_humidity" prefWidth="350.0" prefHeight="20.0" />
+                <Label fx:id= "label_humidity" prefWidth="50.0" prefHeight="20.0" text ="HUMID" />
+
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox>
+            <padding>
+                <Insets topRightBottomLeft="50.0"/>
+
+            </padding>
+            <HBox alignment="CENTER">
+                <Circle fx:id="red_led" fill="red" radius="50.0" stroke="black" />
+                <spacing>100.0</spacing>
+                <Circle fx:id="green_led" fill="green" radius="50.0" stroke="black" />
+            </HBox>
+            <HBox alignment="CENTER">
+
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets topRightBottomLeft="40.0"/>
+
+            </padding>
+            <spacing>100.0</spacing>
+            <Button text = "RED LED" fx:id="button_red_led" prefWidth="200.0" prefHeight="30.0"
+                    onAction="#buttonOnClickedRedLED" />
+            <Button text = "GREEN LED" fx:id="button_green_led" prefWidth="200.0" prefHeight="30.0"
+                    onAction="#buttonOnClickedGreenLED" />
+
+        </HBox>
+    </bottom>
+
+</BorderPane>
